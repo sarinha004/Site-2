@@ -1,418 +1,153 @@
-* {
+:root {
+  --main-color: #00eeff;
+  --text-color: #ffffff;
+  --bg-color-01: #1f242d;
+  --bg-color-02: #323946;
+  --color-00: #0000001a;
+  --color-01: #999999;
+  --color-02: #009539;
+  --color-03: #7950f2;
+  --color-04: #c00000;
+  --color-05: #232323;
+}
 
+* {
 margin: 0;
 padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+border: none;
+outline: none;
+scroll-behavior: smooth;
+}
+
+html {
+
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 16px;
 
 }
 
 body {
 
-height: 100vh;
-background-color: rgba(253, 193, 223, 0.95);
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-margin: 0;
-color: rgb(0, 0, 0);
+background-color: var(--bg-color-01);
+color: var(--text-color);
 
 }
 
-.cabecalho {
+header {
 
-padding: 2% 0% 0% 34%;
-
-}
-
-.cabecalho-menu {
-
-display: flex;
-gap: 170px;
-
-}
-
-.cabecalho-menu-links {
-
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-size: 28px;
-font-weight: 600;
-color: rgb(0, 0, 0);
-text-decoration: none;
-
-}
-
-.titulo-destaque {
-
-color: #000000;
-
-}
-
-.conteudo {
-
-height: auto;
-flex-direction: column;
-margin: 10%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-bottom: 15px;
-
-}
-
-.apresentacao-conteudo {
-
-width: 615px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-height: auto;
-gap: 30px;
-order: 2;
-}
-
-.apresentacao-conteudo-titulo {
-
-font-size: 38px;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-text-align: justify;
-
-}
-
-.apresentacao-conteudo-paragrafo {
-
-font-size: 20px;
-font-family: 'Times New Roman', Times, serif;
-text-align: justify;
-
-}
-
-.botao1 {
-
-background-color: #3a2337;
-color: rgb(246, 244, 244);
-width: 500px;
-height: 80px;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-border: 2px solid rgb(250, 208, 232);
-border-radius: 50px;
-font: size 36px;
-padding: 15px 0;
-text-decoration: none;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-letter-spacing: 2px;
-text-transform: uppercase;
-position: relative;
-overflow: hidden;
-
-}
-
-.botao1::before {
-
-content: "";
-position: absolute;
+position: fixed;
 top: 0;
-left: -100%;
+left: 0;
 width: 100%;
-height: 100%;
-background: linear-gradient(45deg, transparent, rgb(119, 255, 237));
-transition: 0.5s;
-}
-.botao1:hover::before {
-    left: 100%;
-}
-.botao1 i {
-     position: absolute;
-     left:50%;
-     top: 50%;
-     transform: translate(-50%, -50%);
-     font-size: 60px;
+padding: 1.1rem;
+background-color: var(--bg-color-01);
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
 
 }
 
-/* fim do botao1 */
+.logo {
 
-/* inicio do botao2 */
+font-size: 1.7rem;
+color: var(--text-color);
+font-weight: 600;
+cursor: default;
 
-.botao2 {
+}
 
-    background-color: #3a2337;
-    color: #0077b5;
-    width: 500px;
-    height: 80px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgb(250, 208, 232);
-    border-radius: 50px;
-    font: size 36px;
-    padding: 15px 0;
-    text-decoration: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    
-    }
-    
-    .botao2::before {
-    
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent, #0077b5);
-    transition: 0.5s;
-    }
-    .botao2:hover::before {
-        left: 100%;
-    }
-    .botao2 i {
-         position: absolute;
-         left:50%;
-         top: 50%;
-         transform: translate(-50%, -50%);
-         font-size: 60px;
-    }
-    /* fim do botao2 */
-    
-          /* inicio do botao3 */
+.nav-resposive {
 
-    .botao3 {
+display: none;
+position: absolute;
+top: 100%;
+right: 0;
+width: 100%;
+padding: 1rem;
+background-color: rgb(0, 0, 0, 0.4);
+flex-direction: column;
 
-        background-color: #3a2337;
-        color: rgb(210, 53, 25);
-        width: 500px;
-        height: 80px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid rgb(250, 208, 232);
-        border-radius: 50px;
-        font: size 36px;
-        padding: 15px 0;
-        text-decoration: none;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        position: relative;
-        overflow: hidden;
-        
-        }
-        
-        .botao3::before {
-        
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, transparent, rgb(237, 129, 92));
-        transition: 0.5s;
-        }
-        .botao3:hover::before {
-            left: 100%;
-        }
-        .botao3 i {
-             position: absolute;
-             left:50%;
-             top: 50%;
-             transform: translate(-50%, -50%);
-             font-size: 60px;
-        }
-              /* fim do botao3 */
+}
 
-               /* inicio do botao4 */
+.nav a, nav.nav-resposive a {
 
-        .botao4 {
+font-size: 1.2rem;
+color: var(--text-color);
+padding: 0.5rem 1rem;
+transition: 0.4s;
 
-            background-color: #3a2337;
-            color: rgb(28, 139, 76);
-            width: 500px;
-            height: 80px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid rgb(250, 208, 232);
-            border-radius: 50px;
-            font: size 36px;
-            padding: 15px 0;
-            text-decoration: none;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            position: relative;
-            overflow: hidden;
-            
-            }
-            
-            .botao4::before {
-            
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgb(28, 139, 76));
-            transition: 0.5s;
-            }
-            .botao4:hover::before {
-                left: 100%;
-            }
-            .botao4 i {
-                 position: absolute;
-                 left:50%;
-                 top: 50%;
-                 transform: translate(-50%, -50%);
-                 font-size: 60px;
-            }
-            /* fim do botao4 */
+}
 
-                /* inicio do botao5 */
+.nav a:hover, .nav-resposive a:hover {
 
-            .botao5 {
+color: var(--main-color);
 
-                background-color: #3a2337;
-                color: rgb(255, 194, 235);
-                width: 500px;
-                height: 80px;
-                margin-bottom: 10px;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 2px solid rgb(250, 208, 232);
-                border-radius: 50px;
-                font: size 36px;
-                padding: 15px 0;
-                text-decoration: none;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                position: relative;
-                overflow: hidden;
-                
-                }
-                
-                .botao5::before {
-                
-                content: "";
-                position: absolute;
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(45deg, transparent, rgb(237, 15, 137));
-                transition: 0.5s;
-                }
-                .botao5:hover::before {
-                    left: 100%;
-                }
-                .botao5 i {
-                     position: absolute;
-                     left:50%;
-                     top: 50%;
-                     transform: translate(-50%, -50%);
-                     font-size: 60px;
-                }
-                /* fim do botao5 */
+}
 
-                .imagem {
+section {
 
-                    max-width:100%;
-                    width:650px;
-                    height: 650px;
-                    text-align: center;
-                    align-items: center;
-                    border-radius: 10px;
-                    box-shadow: 0px 0px 20px rgba(245, 245, 245, 0.95);
-                    transition: transform 0.3s ease-in-out;
-                    position: relative;
-                    overflow: hidden;
-                    order: 1;
-                    margin-bottom: 80px;
+min-height: 100vh;
+padding: 6rem 6rem 2rem;
 
-                }
+}
 
-                .imagem img {   
+.home, .about{
 
-                 object-fit: cover;
-                 display: block;
-                 width: 100%;
-                 height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
 
-                }
+}
+.home-img {
+    border-right: solid 0.6rem;
+    border-bottom: solid 0.6rem;
+    border-image: linear-gradient (135deg, transparent 50%, var(--main-color)) 1;
+}
 
-                .imagem::before,
-                .imagem::after { 
+.about-imag{
+    border-left: solid 0.6rem;
+    border-bottom: solid 0.6rem;
+    border-image: linear-gradient (225deg, transparent 50%, var(--main-color)) 1;
 
-                content: "";
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                border: 2px solid black;
-                background-color: transparent;
+}
+.home-img img,  .about-img img {
+ width: 100%;
 
-                }
+}
+.about {
+ background-color: var(--bg-color-02);
 
-                .imagem::before{
+}
+.home-content, .about-content {
+      width: 45%;
+}
 
-                bottom: 0;
-                right: 0;
-                border-bottom-right-radius: 10px;
-                border-width: 2px 0 0 2px;
+.home-content h1, .about-content h1 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-content h3, .about-content h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+   home-content p, .about-content p {
+   margin-top: 1.2rem;
+   text-align: justify;
+}
+   .services h2,
+   .portfolio h2,
+   .contact h2 {
+     font-size: 2.2rem;
+     margin-bottom: 1rem;
+     text-align: center;
+}   
+.services-container {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
 
-                }
-
-                .imagem::after{ 
-
-                bottom: 0;
-                right: 0;
-                border-bottom-right-radius: 10px;
-                border-width: 0 2px 2px 0;
-
-
-                }
-
-                .imagem:hover{
-
-                transform: scale(1.1);
-
-
-                }  
-                
-                .rodape {
-
-                 position: fixed;
-                 bottom: 0;
-                 left: 0;
-                 width: 100%;
-                 color:white;
-                 background-color: #ec9fd429;
-                 display:flex;
-                 align-items: center;
-                 justify-content: center;
-                 font-family: 'Times New Roman', Times, serif; 
-                 font-size: 18px;
-                 font-weight: 400px;
-                 padding: 10px;
-
-                              }
-
-            .rodape a:hover{
-                 color: #000000;
-
-
-                   }
-
+}
